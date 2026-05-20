@@ -7,9 +7,9 @@ async function buscarEMostrarVideos() {
     ? "https://gist.githubusercontent.com/antonio-evaldo/e8a63621b51c883931eb3fa3a3eca990/raw/12f5c46ee6dd00d03c051adadaf341e06452cea0/videos.txt"
     : "http://localhost:3000/videos";
   console.log(import.meta.env.PROD);
-  console.log("https://gist.githubusercontent.com/antonio-evaldo/e8a63621b51c883931eb3fa3a3eca990/raw/12f5c46ee6dd00d03c051adadaf341e06452cea0/videos.txt");
+  console.log(urlVideos);
   try {
-    const busca = await axios.get(urlVideos);
+    const busca = await axios.get("https://gist.githubusercontent.com/antonio-evaldo/e8a63621b51c883931eb3fa3a3eca990/raw/12f5c46ee6dd00d03c051adadaf341e06452cea0/videos.txt");
     const videos = busca.data;
 
     videos.forEach((video) => {
